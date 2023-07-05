@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>PIZZAS</title>
+</head>
+<body onload="calcular() " class="text-center">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            PIZZAS CHESTER
+          </a>
+        </div>
+      </nav>
+      <h1 class=" bg-dark text-white ">TAMAÑO</h1>
+    <div class="card m-2">
+    <select class="form-control bg-warning text-white text-center "name="producto" onchange="calcular()" id="producto">
+        <option value="individual" >Individual</option>
+        <option value="grande" >Grande</option>
+        <option value="familiar" >Familiar</option>
+        <option value="jumbo">JUMBO</option>
+    </select>
+    <div id="img"></div>
+    <div class="bg-danger text-white h1 m-3"id="precio">Precio: $ 0.00 MXN</div>
+    <h1 class="bg-danger text-white">Cantidad</h1>
+    <input class="form-control bg-warning "type="range" id="cantidad" value="0" min="1" max="10">
+    <label class="h2 "id="vcan">1</label>
+    <div class="bg-danger text-white h1 "id="extras">EXTRAS: $ 0.00 MXN</div>
+    
+    <div class="m-2 " onchange="calcular()" checked="checked">
+    <input type="checkbox" name="m" id="refresco" class="form-check-input p-2 ">Refresco 2L
+    <input type="checkbox" name="m" id="papas" class="form-check-input " onchange="calcular()" >PAPAS
+    <input type="checkbox" name="m" id="alitas" class="form-check-input" onchange="calcular()" >ALITAS
+    
+    </div>
+        <div class="bg-danger text-white h2 "id="precioC">TOTAL A PAGAR: $ 0.00 MXN</div>
+   </div>
+    <script src="bootstrap.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
